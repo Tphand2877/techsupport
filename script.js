@@ -104,3 +104,17 @@ const result = mockData[jobId] || "Không tìm thấy mã này. Vui lòng liên 
         observer.observe(card);
     });
 });
+async function checkStatus() {
+    const jobId = document.getElementById('jobID').value.trim();
+    // URL này lấy từ Apps Script sau khi Deploy
+    const webAppUrl = "https://script.google.com/macros/s/AKfycbxySQZnOAifuYjyj1QcBPNrXTguWMgygb0StiY1v_cQKUU7ViaR_CSkNfEzoZrOor2E/exec" + jobId;
+
+    const response = await fetch(webAppUrl);
+    const result = await response.json();
+    
+    if(result.status) {
+        alert("Khách hàng: " + result.name + "\nTrạng thái: " + result.status);
+    } else {
+        alert("Mã vận đơn không chính xác!");
+    }
+}

@@ -214,3 +214,42 @@ body {
         min-height: 500px;
     }
 }
+/* Tối ưu hiển thị bảng giá */
+.price-list-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.price-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.price-img:hover {
+    transform: scale(1.01); /* Hiệu ứng nổi nhẹ khi di chuột */
+}
+
+.price-actions {
+    margin-top: 20px;
+}
+
+.software-tabs {
+    display: grid;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.tab-item {
+    background: #fff;
+    padding: 15px;
+    border-left: 4px solid var(--primary-color); /* Giả sử bạn đặt biến màu chính là xanh */
+    border-radius: 5px;
+    font-size: 0.95rem;
+}

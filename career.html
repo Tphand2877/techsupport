@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cẩm nang Tự sửa Máy tính | TechSupport ICTU & TNUT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0062ff;
+            --secondary: #00d2ff;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--dark);
+            background-color: var(--light); /* Đổi nhẹ màu nền để các card nổi bật hơn */
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Navbar */
+        .navbar {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(255, 255, 255, 0.8);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-content { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); }
+        .logo span { color: var(--primary); }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary { background: var(--primary); color: var(--white); box-shadow: 0 10px 15px -3px rgba(0, 98, 255, 0.3); }
+        .btn-nav { background: var(--dark); color: var(--white); font-size: 0.9rem; }
+        .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+
+        /* Content Specific Styles */
+        .handbook-content { padding: 120px 0 80px; max-width: 850px; margin: 0 auto; }
+        
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--dark); }
+        .section-header p { color: var(--gray); font-size: 1.1rem; }
+
+        .handbook-card { 
+            background: var(--white); 
+            padding: 40px; 
+            border-radius: 24px; 
+            box-shadow: var(--shadow); 
+            margin-bottom: 30px; 
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+        .handbook-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        
+        .handbook-card h2 { 
+            color: var(--primary); 
+            margin-bottom: 20px; 
+            font-size: 1.5rem; 
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .handbook-card h2 i {
+            background: #dbeafe;
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 1.2rem;
+        }
+
+        .handbook-card p { color: var(--gray); margin-bottom: 15px; }
+        
+        .step-list { list-style: none; counter-reset: my-awesome-counter; }
+        .step-list li { 
+            margin-bottom: 15px; 
+            padding-left: 40px; 
+            position: relative; 
+            color: var(--dark);
+            font-weight: 500;
+        }
+        .step-list li::before {
+            counter-increment: my-awesome-counter;
+            content: counter(my-awesome-counter);
+            position: absolute;
+            left: 0;
+            top: -2px;
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .step-desc {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--gray);
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        .urgent-box { 
+            background: #fff1f2; 
+            border: 1px solid #fecaca; 
+            padding: 20px; 
+            border-radius: 12px; 
+            color: #e11d48; 
+            font-weight: 600; 
+            margin-top: 25px; 
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .urgent-box i { font-size: 1.5rem; }
+
+        .back-home { margin-top: 50px; text-align: center; }
+
+        /* Footer */
+        .footer { background: #000000; color: #bbc5d2; padding: 40px 0; }
+        .footer-bottom { text-align: center; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Tech<span>Support</span></div>
+            <a href="index.html" class="btn btn-nav">Quay lại Trang chủ</a>
+        </div>
+    </nav>
+
+    <div class="container handbook-content">
+        <div class="section-header">
+            <h1>Cẩm nang Tự sửa Máy tính</h1>
+            <p>Bí kíp "cấp cứu" laptop dành cho sinh viên trước khi mang ra tiệm.</p>
+        </div>
+
+        <div class="handbook-card">
+            <h2><i class="fa-solid fa-power-off"></i> 1. Máy tính bật không lên nguồn (No Power)</h2>
+            <p>Đừng vội hoảng hốt! Rất nhiều trường hợp máy tính chỉ đang bị kẹt dòng điện hoặc lỏng cáp.</p>
+            <ul class="step-list">
+                <li>
+                    Kiểm tra nguồn điện và sạc
+                    <span class="step-desc">Đảm bảo ổ cắm có điện, đèn báo sạc trên thân máy (nếu có) đang sáng. Thử mượn sạc cùng loại để cắm thử.</span>
+                </li>
+                <li>
+                    Xả tĩnh điện (Hard Reset)
+                    <span class="step-desc">Rút sạc, tháo pin (nếu là pin rời). Nhấn và giữ nút nguồn trong khoảng 30-60 giây. Sau đó cắm sạc lại (chưa lắp pin) và bật máy.</span>
+                </li>
+                <li>
+                    Kiểm tra nhiệt độ
+                    <span class="step-desc">Nếu máy vừa hoạt động công suất cao và tắt đột ngột, có thể do quá nhiệt. Hãy để máy nghỉ 30 phút ở nơi thoáng mát rồi bật lại.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="handbook-card">
+            <h2><i class="fa-solid fa-gauge-high"></i> 2. Máy tính chạy chậm, hay bị đơ (Lag/Treo)</h2>
+            <p>Máy chạy ì ạch thường do tràn RAM, Full Disk hoặc quá nhiều ứng dụng chạy ngầm.</p>
+            <ul class="step-list">
+                <li>
+                    Kiểm tra Task Manager (Ctrl + Shift + Esc)
+                    <span class="step-desc">Xem cột CPU, Memory, Disk. Ứng dụng nào đang ngốn tài nguyên bất thường thì nhấp chuột phải chọn "End Task".</span>
+                </li>
+                <li>
+                    Tắt ứng dụng khởi động cùng Windows
+                    <span class="step-desc">Vào tab Startup trong Task Manager, chuột phải vào các ứng dụng không cần thiết (như Skype, Zalo, IDM...) và chọn "Disable".</span>
+                </li>
+                <li>
+                    Dọn dẹp file rác
+                    <span class="step-desc">Nhấn Win + R, gõ <code>%temp%</code> và xóa sạch các file trong đó. Làm tương tự với lệnh <code>temp</code> và <code>prefetch</code>.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="handbook-card">
+            <h2><i class="fa-solid fa-wifi"></i> 3. Không bắt được Wi-Fi hoặc mạng chập chờn</h2>
+            <p>Lỗi kết nối mạng ở trọ hoặc trường học là cực kỳ phổ biến.</p>
+            <ul class="step-list">
+                <li>
+                    Quên mạng và kết nối lại
+                    <span class="step-desc">Vào cài đặt Wi-Fi, chuột phải vào tên mạng bị lỗi chọn "Forget" (Quên). Sau đó nhập lại mật khẩu để kết nối.</span>
+                </li>
+                <li>
+                    Khởi động lại Card mạng (Network Adapter)
+                    <span class="step-desc">Nhấn Win + X, chọn Network Connections > Change adapter options. Chuột phải vào Wi-Fi chọn Disable, đợi 10s rồi Enable lại.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="handbook-card">
+            <h2><i class="fa-solid fa-desktop"></i> 4. Lỗi màn hình xanh (Blue Screen - BSOD)</h2>
+            <p>Đây thường là lỗi do xung đột phần mềm, lỗi Driver hoặc phần cứng có vấn đề.</p>
+            <ul class="step-list">
+                <li>
+                    Ghi lại mã lỗi (Stop Code)
+                    <span class="step-desc">Chú ý dòng chữ in hoa ở góc dưới màn hình xanh (VD: MEMORY_MANAGEMENT, CRITICAL_PROCESS_DIED) để Google cách khắc phục cụ thể.</span>
+                </li>
+                <li>
+                    Gỡ cài đặt phần mềm vừa tải
+                    <span class="step-desc">Nếu máy vừa cài một phần mềm hoặc cập nhật Driver xong bị màn hình xanh, hãy vào Safe Mode để gỡ cài đặt chúng.</span>
+                </li>
+            </ul>
+            <div class="urgent-box">
+                <i class="fa-solid fa-triangle-exclamation"></i> 
+                <div>
+                    <strong>Lưu ý quan trọng:</strong> Nếu màn hình xanh xuất hiện liên tục kèm tiếng kêu tít tít, khả năng cao lỏng RAM hoặc ổ cứng sắp hỏng. Hãy sao lưu dữ liệu ngay lập tức và liên hệ TechSupport!
+                </div>
+            </div>
+        </div>
+
+        <div class="back-home">
+            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-headset"></i> Vẫn không tự sửa được? Đặt lịch ngay</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2024 TechSupport Team. Cẩm nang hỗ trợ kỹ thuật nội bộ sinh viên.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
