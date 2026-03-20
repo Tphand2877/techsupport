@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSupport</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Tech<span>Support</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#software">Pricing</a></li>
+                <li><a href="#booking">Booking & Tracking</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+            <a href="#booking" class="btn btn-nav">Repair Now</a>
+            <button type="button" class="btn" onclick="window.location.href='index.html'">Tiếng Việt</button>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container hero-wrapper">
+            <div class="hero-text">
+                <span class="badge">S2S Model (Student-to-Student)</span>
+                <h1>Computer Repair & Sales <br><span>Professional & Reliable</span></h1>
+                <p>We support all students at Thai Nguyen University in optimizing their learning tools. From OS installation to specialized software, TechSupport is always by your side.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn btn-primary">Explore Services</a>
+                    <a href="#booking" class="btn btn-outline"><i class="fa-solid fa-magnifying-glass"></i> Track Device</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://cdn.hstatic.net/files/200000722513/file/laptop-1.jpg" alt="Tech Support">
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="section container">
+        <div class="section-header">
+            <h2>Standardize Your Study & Work Devices</h2>
+            <p>No more worries about lag, overheating, or software errors. Our services help you focus entirely on studying and creativity.</p>
+        </div>
+        <div class="service-grid">
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                <h3>New Device Setup</h3>
+                <p>OS, Office & Driver installation. Includes Unikey and OS optimization services.</p>
+                <ul class="card-list">
+                    <li><i class="fa-solid fa-check"></i> Standard Windows/macOS</li>
+                    <li><i class="fa-solid fa-check"></i> Genuine Office 365</li>
+                    <li><i class="fa-solid fa-check"></i> Laptop Performance Optimization</li>
+                </ul>
+            </div>
+            <div class="card active">
+                <div class="card-icon"><i class="fa-solid fa-wind"></i></div>
+                <h3>Legacy Device Revival</h3>
+                <p>Deep cleaning, thermal paste replacement, and OS upgrades. RAM/SSD upgrade consulting at cost price.</p>
+                <ul class="card-list">
+                    <li><i class="fa-solid fa-check"></i> 15-20°C Temperature Reduction</li>
+                    <li><i class="fa-solid fa-check"></i> Faster Boot Times</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-shop"></i></div>
+                <h3>Consulting & Hardware</h3>
+                <p>Assistance in sourcing, testing, and installing high-quality computer components at optimal costs for students.</p>
+                <ul class="card-list">
+                    <li><i class="fa-solid fa-check"></i> Component Quality Check</li>
+                    <li><i class="fa-solid fa-check"></i> Compatible Hardware Advice</li>
+                    <li><i class="fa-solid fa-check"></i> Ordering & Installation Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="software" class="section gray-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Detailed Price List</h2>
+                <p>From students, for students - Professional technical quality at campus prices.</p>
+            </div>
+            
+            <div class="price-list-container">
+                <img src="EnPricelist.png" alt="TechSupport Price List" class="price-img">
+                
+                <div class="price-actions">
+                    <a href="EnPricelist.png" target="_blank" class="btn btn-outline">
+                        <i class="fa-solid fa-expand"></i> View High-Res Image
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <section id="booking" class="section container">
+    <div class="section-header">
+        <h2>Schedule, Booking & Tracking</h2>
+        <p>Choose a suitable time slot so we can provide the best support.</p>
+    </div>
+    
+    <div class="booking-wrapper">
+        <div class="calendar-container">
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1w2_72dO9XWgs0VeVEP46Rj1G3YPMXmyUX6sjBnlM5pQ_FQQADXQ5QsxmzSHDE0nRqcTRRqhzc?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+        </div>
+        <div class="booking-sidebar">
+            <div class="info-card">
+                <h4><i class="fa-solid fa-clock-rotate-left"></i> Track Your Device Status</h4>
+                <div class="tracking-input">
+                    <input type="text" id="trackID" placeholder="Enter Code TSxxx">
+                    <button class="btn btn-primary">Find</button>
+                </div>
+            </div>
+            
+            <div class="info-card warning">
+                <h4><i class="fa-solid fa-triangle-exclamation"></i> Important Notes</h4>
+                <ul>
+                    <li style="color: #ff0000;">Always back up your data before bringing your device.</li>
+                    <li style="color: #ff0000;">We will confirm via Email/Zalo after you book a slot.</li>
+                    <li style="color: #ff0000;">1-week service warranty for all software tasks.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section gray-bg">
+    <div class="container">
+        
+        <div class="about-header">
+            <h2 class="about-title" style="font-family: 'Plus Jakarta Sans', sans-serif;">About Us</h2>
+            <div class="about-card-wrapper">
+                <span class="quote-icon">“</span>
+                <div class="about-content-inner">
+                    <h3 class="about-subtitle">"The journey from sleepless nights saving deadlines..."</h3>
+
+                    <p class="text-italic">
+                        Have you ever felt your heart 'tighten' when your laptop suddenly Blue Screens right when your project is due in just a few hours?
+                    </p>
+
+                    <p class="text-paragraph">
+                        We – IT students at <strong>Thai Nguyen University</strong> – have been in that exact position. TechSupport didn't start from grand business plans; it began from sleepless nights helping roommates recover data and afternoons spent cleaning laptops for friends in the dormitory.
+                    </p>
+
+                    <p class="text-paragraph">
+                        For us, no student should have to pause their creative journey or miss a learning opportunity due to avoidable computer mishaps. TechSupport doesn't just sell repair services; we provide <strong>Peace of Mind</strong> and <strong>Partnership</strong>.
+                    </p>
+
+                    <p class="highlight-box">
+                        Whether it's a tricky software error at midnight or deep hardware upgrade needs, our team is ready to <strong>support you directly at your rental room or dormitory</strong>. The <strong>"Student-to-Student"</strong> philosophy is our North Star, helping us understand your pressure better than anyone else.
+                    </p>
+
+                    <p class="text-footer">
+                        At TechSupport, you don't just find technicians; you find reliable technology companions.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="team-title">Founding Team</h3>
+        <div class="team-container">
+            
+            <div class="team-card">
+                <div class="team-card-body">
+                    <img src="ThuanPhan.jpg" alt="CEO Founder" class="team-img">
+                    <h4 class="team-name">Phan Duc Thuan</h4>
+                    <p class="team-role">CEO - Founder</p>
+                    <div class="expertise-box">
+                        <strong>Expertise:</strong>
+                        <ul class="expertise-list">
+                            <li>OS & Software Optimization</li>
+                            <li>PC/Laptop Workstation Configuration Consulting</li>
+                            <li>Advanced Hardware Repair Techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-card-body">
+                    <img src="ToTan.webp" alt="Co-Founder" class="team-img team-img-alt">
+                    <h4 class="team-name">To Anh Tan</h4>
+                    <p class="team-role team-role-alt">CEO - Co-Founder</p>
+                    <div class="expertise-box">
+                        <strong>Expertise:</strong>
+                        <ul class="expertise-list">
+                            <li>Standard Computer Maintenance & Cleaning</li>
+                            <li>Operations Management & 24/7 Tech Support</li>
+                            <li>Facebook Page Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="logo" style="color: #f7f7f7;">Tech<span>Support</span></div>
+                <p>An IT student project supporting the student community.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="EnWarranty.html">Warranty Policy</a></li>
+                    <li><a href="EnCareer.html">DIY Repair Guide</a></li>
+                    <li><a href="EnRecruitment.html">Join Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/people/TechSupport-Sinh-Viên-Vọc-Vạch/61582185616325/" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechSupport Team. Designed with love</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -8,6 +8,7 @@
     --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -36,8 +37,17 @@ body {
 
 .nav-content { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 
-.logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); }
-.logo span { color: var(--primary); }
+.logo { 
+    /* Ưu tiên Plus Jakarta Sans, nếu không có sẽ dùng Be Vietnam Pro */
+    font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', sans-serif; 
+    font-size: 1.8rem; 
+    font-weight: 800; 
+    letter-spacing: -0.02em; /* Giảm khoảng cách chữ để trông chuyên nghiệp hơn */ 
+}
+
+.logo span { 
+    color: var(--primary); 
+}
 
 .nav-links { display: flex; list-style: none; gap: 30px; }
 .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; transition: 0.3s; }
@@ -133,7 +143,7 @@ body {
 .footer ul li { margin-bottom: 12px; }
 .footer ul a { color: inherit; text-decoration: none; transition: 0.3s; }
 .footer ul a:hover { color: var(--white); }
-.social-icons { display: flex; gap: 20px; font-size: 1.5rem; }
+.social-icons { display: flex; gap: 20px; font-size: 1.5rem; color:#007bff }
 .footer-bottom { text-align: center; border-top: 1px solid #1e293b; padding-top: 30px; font-size: 0.8rem; }
 
 /* Responsive */
@@ -249,7 +259,7 @@ body {
 .tab-item {
     background: #fff;
     padding: 15px;
-    border-left: 4px solid var(--primary-color); /* Giả sử bạn đặt biến màu chính là xanh */
+    border-left: 4px solid var(--primary-color); 
     border-radius: 5px;
     font-size: 0.95rem;
 }
@@ -427,6 +437,7 @@ body {
     padding-left: 18px;
     margin-top: 10px;
 }
+
 /* Recruitment Page Styles */
 .recruitment-bg {
     background: radial-gradient(circle at top right, #e9f2ff, #f8f9fa);
@@ -587,9 +598,12 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
 }
+/* Policy Page Styles */
 .policy-content { padding: 120px 0 80px; max-width: 800px; margin: 0 auto; }
 .policy-card { background: var(--white); padding: 40px; border-radius: 24px; box-shadow: var(--shadow); margin-bottom: 30px; }
 .policy-card h2 { color: var(--primary); margin-bottom: 20px; font-size: 1.8rem; border-left: 5px solid var(--primary); padding-left: 15px; }
 .policy-card p,.policy-card li { color: var(--gray); margin-bottom: 15px; }
 .urgent-box { background: #fff1f2; border: 1px solid #fecaca; padding: 20px; border-radius: 12px; color: #e11d48; font-weight: 600; margin-top: 20px; }
 .back-home { margin-top: 40px; text-align: center; }
+.back-home a { display: inline-block; background: var(--primary); color: var(--white); padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+.back-home a:hover { background: var(--white); color: var(--primary); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0, 98, 255, 0.3); }
